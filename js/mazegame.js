@@ -1,5 +1,4 @@
 var Game = function (args) {
-  this.hacks = !!args.hacks || false;
   this.player = { position: new THREE.Vector3(-1.5, 0.1, 1), theta: Math.PI * 1.5, phi: 0 };
 
   Asset.init();
