@@ -7,9 +7,9 @@ var PointerLock = function (args) {
 
   var onMouseMove = function (event) {
     if (pointerLockActive === false) return;
-
-    var movementX = event.movementX || event.mozMovementX || 0;
-    var movementY = event.movementY || event.mozMovementY || 0;
+    console.log(event.movementX, event.movementY);
+    var movementX = event.movementX || event.mozMovementX || 0; // sebagai movement mouse horizontal
+    var movementY = event.movementY || event.mozMovementY || 0; // sebagai movement mouse vertical
 
     g.player.theta -= movementX * scope.sensitivity;
     g.player.phi -= movementY * scope.sensitivity;

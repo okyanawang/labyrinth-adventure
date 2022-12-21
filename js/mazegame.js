@@ -214,7 +214,7 @@ Game.prototype.playerCollides = function (dir, amount) {
 };
 
 Game.prototype.update = function (delta) {
-  var MoveSpeed = 1.5 * delta;
+  var MoveSpeed = 3 * delta;
   var KeyRotateSpeed = 1.4 * delta;
 
   if (InputManager.isKeyPressed(113)) {
