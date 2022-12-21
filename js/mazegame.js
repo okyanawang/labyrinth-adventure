@@ -3,9 +3,6 @@ var Game = function (args) {
 
   Asset.init();
 
-  var light = new THREE.AmbientLight(0x909090);
-  scene.add(light);
-
   THREEx.FullScreen.bindKey({ charCode: "f".charCodeAt(0) });
 
   if (requestPointerLock()) {
