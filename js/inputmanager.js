@@ -1,40 +1,32 @@
-var InputManager =
-{
-    keys: [],
-    oldKeys: [],
+var InputManager = {
+  keys: [],
+  oldKeys: [],
 
-    update: function()
-    {
-        this.oldKeys = this.keys.clone();
-    },
+  update: function () {
+    this.oldKeys = this.keys.clone();
+  },
 
-    keyDown: function( code )
-    {
-        this.keys[ code ] = true;
-    },
+  keyDown: function (code) {
+    this.keys[code] = true;
+  },
 
-    keyUp: function( code )
-    {
-        this.keys[ code ] = false;
-    },
+  keyUp: function (code) {
+    this.keys[code] = false;
+  },
 
-    isKeyDown: function( code )
-    {
-        return ( this.keys[ code ] === true );
-    },
+  isKeyDown: function (code) {
+    return this.keys[code] === true;
+  },
 
-    isKeyPressed: function( code )
-    {
-        return ( this.keys[ code ] === true && this.oldKeys[ code ] !== true );
-    },
+  isKeyPressed: function (code) {
+    return this.keys[code] === true && this.oldKeys[code] !== true;
+  },
 };
 
-document.onkeydown = function( evnt )
-{
-    InputManager.keyDown(evnt.keyCode);
+document.onkeydown = function (evnt) {
+  InputManager.keyDown(evnt.keyCode);
 };
 
-document.onkeyup = function( evnt )
-{
-    InputManager.keyUp(evnt.keyCode);
+document.onkeyup = function (evnt) {
+  InputManager.keyUp(evnt.keyCode);
 };
