@@ -1,28 +1,77 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Maze</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <style>
-    body { margin: 0; padding: 0; }
-    canvas { width: 100%; height: 100%; }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinth Adventure | Lobby</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(https://media.newyorker.com/photos/6196d0fe990636d08e02cd92/16:9/w_2560,h_1440,c_limit/211129_r39422web-tout.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(10, 10, 10);
+}
+a{
+    text-decoration: none;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+section > a > h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 3rem;
+    margin-bottom: 2vh;
+    background-color: rgba(0, 107, 14, 0.733);
+}
+section > a > h2:hover{
+    background-color: rgba(0, 147, 184, 0.733);
+}
+section > h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+    margin-bottom: 1rem;
+}
+@keyframes animate{
+    100%{
+        filter: hue-rotate(360deg)
+    }
+}
+</style>
 </head>
 <body>
-
-    <script src="lib/mazegen.js"></script>
-    <script src="lib/tools.js"></script>
-    <script src="lib/three.min.js"></script>
-    <script src="lib/THREEx.FullScreen.js"></script>
-
-
-    <script src="js/utils.js"></script>
-    <script src="js/pointerlock.js"></script>
-    <script src="js/assetmanager.js"></script>
-    <script src="js/inputmanager.js"></script>
-    <script src="js/torch.js"></script>
-    <script src="js/mazegame.js"></script>
-    <script src="js/main.js"></script>
-
+<section>
+    <h1>
+        LABYRINTH ADVENTURE
+    </h1>
+    <a href="./game.html">
+        <h2>START PLAYING</h2>
+    </a>
+    <a href="./description.html">
+        <h2>DESCRIPTION</h2>
+    </a>
+</section>    
 </body>
 </html>
